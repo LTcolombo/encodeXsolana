@@ -1,0 +1,518 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8879247830912009924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Create Character
+  m_EditorClassIdentifier: Assembly-CSharp:Nodes:CreateCharacter
+  graph: {fileID: 11400000}
+  position: {x: 200, y: -104}
+  ports:
+    keys:
+    - in
+    values:
+    - _fieldName: in
+      _node: {fileID: -8879247830912009924}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: answer 0
+        node: {fileID: -6507703924049446060}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  in: 
+  type: 1
+--- !u!114 &-6507703924049446060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8deedb404df94736ae553d264db170f4, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -8, y: -184}
+  ports:
+    keys:
+    - answer 0
+    - answer 1
+    - answer 2
+    - in
+    - answer
+    values:
+    - _fieldName: answer 0
+      _node: {fileID: -6507703924049446060}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: in
+        node: {fileID: -5079319962359053190}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answer 1
+      _node: {fileID: -6507703924049446060}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: in
+        node: {fileID: 6287921677239760032}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answer 2
+      _node: {fileID: -6507703924049446060}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: in
+      _node: {fileID: -6507703924049446060}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: answer 0
+        node: {fileID: -5272999415785408004}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answer
+      _node: {fileID: -6507703924049446060}
+      _typeQualifiedName: System.String[], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  prompt: Sure, I could fix them up for the right price?
+  in: 
+  answer:
+  - Could you please fix up the factory?
+  - Can you fix that old hotel?
+  - Nevermind..
+--- !u!114 &-5272999415785408004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8deedb404df94736ae553d264db170f4, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -328, y: -152}
+  ports:
+    keys:
+    - answer 0
+    - answer 1
+    - in
+    - answer
+    values:
+    - _fieldName: answer 0
+      _node: {fileID: -5272999415785408004}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: in
+        node: {fileID: -6507703924049446060}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answer 1
+      _node: {fileID: -5272999415785408004}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: in
+      _node: {fileID: -5272999415785408004}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: out
+        node: {fileID: 8262365880218901643}
+        reroutePoints: []
+      - fieldName: answer 1
+        node: {fileID: 6287921677239760032}
+        reroutePoints: []
+      - fieldName: answer 1
+        node: {fileID: -5079319962359053190}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answer
+      _node: {fileID: -5272999415785408004}
+      _typeQualifiedName: System.String[], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  prompt: Heya, looks like you need some help?
+  in: 
+  answer:
+  - Yeah, they seem to be quite old..
+  - Nope, all good
+--- !u!114 &-5079319962359053190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8deedb404df94736ae553d264db170f4, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 408, y: -360}
+  ports:
+    keys:
+    - answer 0
+    - answer 1
+    - in
+    - answer
+    values:
+    - _fieldName: answer 0
+      _node: {fileID: -5079319962359053190}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: in
+        node: {fileID: 2928819070158897901}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answer 1
+      _node: {fileID: -5079319962359053190}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: in
+        node: {fileID: -5272999415785408004}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: in
+      _node: {fileID: -5079319962359053190}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: answer 0
+        node: {fileID: -6507703924049446060}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answer
+      _node: {fileID: -5079319962359053190}
+      _typeQualifiedName: System.String[], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  prompt: Yep, I think I can make it to 'good' condition for [30 Credits]]
+  in: 
+  answer:
+  - OK, [Pay 30 Credits]
+  - Actually I wanted to ask something else
+--- !u!114 &-2887419595478248049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c78d67c0b8941fdbf87aa7a1011394, type: 3}
+  m_Name: Dime
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 312, y: 152}
+  ports:
+    keys:
+    - in
+    values:
+    - _fieldName: in
+      _node: {fileID: -2887419595478248049}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: answer 1
+        node: {fileID: -6507703924049446060}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  in: 
+  value: 5
+--- !u!114 &-2751440216309723410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c78d67c0b8941fdbf87aa7a1011394, type: 3}
+  m_Name: Dime
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 600, y: -120}
+  ports:
+    keys:
+    - in
+    values:
+    - _fieldName: in
+      _node: {fileID: -2751440216309723410}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: answer 0
+        node: {fileID: -5079319962359053190}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  in: 
+  value: -5
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a171cd762148104283954f9fc937950, type: 3}
+  m_Name: Fixer
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -5272999415785408004}
+  - {fileID: 8262365880218901643}
+  - {fileID: -6507703924049446060}
+  - {fileID: -5079319962359053190}
+  - {fileID: 6287921677239760032}
+  - {fileID: 2928819070158897901}
+  - {fileID: 5378187753107029474}
+  current: {fileID: 0}
+--- !u!114 &2928819070158897901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c629becff8574c21950da723974771d1, type: 3}
+  m_Name: Fix
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 728, y: -296}
+  ports:
+    keys:
+    - in
+    values:
+    - _fieldName: in
+      _node: {fileID: 2928819070158897901}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: answer 0
+        node: {fileID: -5079319962359053190}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  in: 
+  id: 0
+  building: 3
+  state: 2
+  cost: 30
+--- !u!114 &5378187753107029474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c629becff8574c21950da723974771d1, type: 3}
+  m_Name: Fix
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 728, y: 40}
+  ports:
+    keys:
+    - in
+    values:
+    - _fieldName: in
+      _node: {fileID: 5378187753107029474}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: answer 0
+        node: {fileID: 6287921677239760032}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  in: 
+  id: 1
+  building: 4
+  state: 3
+  cost: 40
+--- !u!114 &6287921677239760032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8deedb404df94736ae553d264db170f4, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 408, y: 8}
+  ports:
+    keys:
+    - answer 0
+    - answer 1
+    - in
+    - answer
+    values:
+    - _fieldName: answer 0
+      _node: {fileID: 6287921677239760032}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: in
+        node: {fileID: 5378187753107029474}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answer 1
+      _node: {fileID: 6287921677239760032}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: in
+        node: {fileID: -5272999415785408004}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: in
+      _node: {fileID: 6287921677239760032}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: answer 1
+        node: {fileID: -6507703924049446060}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answer
+      _node: {fileID: 6287921677239760032}
+      _typeQualifiedName: System.String[], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  prompt: Yep, I think I can make it to 'perfect' condition for [40 Credits]]
+  in: 
+  answer:
+  - OK, [Pay 40 Credits]
+  - Actually I wanted to ask something else
+--- !u!114 &8262365880218901643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8529a044166847429a49045bc31036bd, type: 3}
+  m_Name: Start
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -680, y: -104}
+  ports:
+    keys:
+    - out
+    values:
+    - _fieldName: out
+      _node: {fileID: 8262365880218901643}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: in
+        node: {fileID: -5272999415785408004}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  out: 

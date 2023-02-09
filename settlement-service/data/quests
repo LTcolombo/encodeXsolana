@@ -1,0 +1,39 @@
+{
+  "Fixer": [
+    {
+      "type": "Fix",
+      "id": 0,
+      "building": 3,
+      "state": 2,
+      "cost": 30
+    },
+    {
+      "type": "Fix",
+      "id": 1,
+      "building": 4,
+      "state": 3,
+      "cost": 40
+    }
+  ],
+  "Builder": [
+    {
+      "type": "Build",
+      "id": 0,
+      "building": 2,
+      "cost": 80
+    }
+  ],
+  "Manager": [
+    {
+      "type": "Withdraw",
+      "id": 0,
+      "amount": 100,
+      "cost": 100
+    },
+    {
+      "type": "MintAgent",
+      "id": 1,
+      "cost":300
+    }
+  ]
+}
