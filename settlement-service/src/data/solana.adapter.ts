@@ -169,11 +169,11 @@ export default class SolanaAdapter {//} implements IDataAdapter {
 
     async getTokenAccounts(wallet: string) {
 
-
-        return ["Character_CyberPunk_Male_01",
-        "Character_Junky_Female_01",
-        "Character_Medical_Male_01",
-        "Character_Monk_Male_01"];
+//quick debug
+        // return ["Character_CyberPunk_Male_01",
+        // "Character_Junky_Female_01",
+        // "Character_Medical_Male_01",
+        // "Character_Monk_Male_01"];
 
         const METAPLEX = Metaplex.make(SOLANA_CONNECTION)
             .use(keypairIdentity(FROM_KEYPAIR))
